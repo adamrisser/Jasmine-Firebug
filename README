@@ -1,0 +1,8 @@
+JASMINE FIREBUG
+
+This is an extension for jasmine that allows you to run specs in firebug w/o including the jasmine code in your browser.
+
+Install instructions:
+- Check out code
+- Drag .xpi file into an open firefox window.
+
