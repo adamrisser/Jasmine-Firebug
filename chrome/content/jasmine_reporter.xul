@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script src="chrome://jasmine_reporter/content/jasmine.js" 			type="application/x-javascript"/>
+	<script src="chrome://jasmine_reporter/content/reporter.js"  		type="application/x-javascript"/>
+	<script src="chrome://jasmine_reporter/content/jasmine_reporter.js" type="application/x-javascript"/>
+	
+	<commandset id="mainCommandSet">
+		<command id="cmd_jasmine_reporterShowPassed"  oncommand="Firebug.jasmine_reporterModule.onShowPassedButton(FirebugContext)" />
+		<command id="cmd_jasmine_reporterShowSkipped" oncommand="Firebug.jasmine_reporterModule.onShowSkippedButton(FirebugContext)" />
+		<command id="cmd_jasmine_reporterRunAll"      oncommand="Firebug.jasmine_reporterModule.onRunallButton(FirebugContext)" />
+	</commandset>
+	
+	<toolbar id="fbToolbar" align="center">
+		<hbox id="fbToolbarInner" insertbefore="fbDetachButton" flex="1" align="center">
+			<hbox id="fbjasmine_reporterButtons" insertafter="fbNetButtons">
+				
+				<!-- TODO: shorten names/ids -->
+				
+				<toolbarseparator/>
+				<toolbarbutton 
+					id 		 	= "jasmine_reporterRunAll" 
+					label	 	= "Run Suite" 
+					class 		= "toolbar-text-button" 
+					tooltiptext = "Run All" 
+					command 	= "cmd_jasmine_reporterRunAll" />
+				
+				<toolbarseparator/>
+				<toolbarbutton 
+					id 		 	= "jasmine_reporterShowPassed" 
+					label	 	= "Show Passed" 
+					class 		= "toolbar-text-button" 
+					tooltiptext = "Show Passed" 
+					command 	= "cmd_jasmine_reporterShowPassed" />
+				
+				<toolbarseparator/>
+				<toolbarbutton 
+					id 		 	= "jasmine_reporterShowFailed" 
+					label	 	= "Show Skipped" 
+					class 		= "toolbar-text-button" 
+					tooltiptext = "Show Skipped" 
+					command 	= "cmd_jasmine_reporterShowSkipped" />
+				
+			</hbox>
+		</hbox>
+	</toolbar>
+	
+</overlay>

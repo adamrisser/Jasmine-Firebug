@@ -1,0 +1,5 @@
+content		jasmine_reporter		chrome/content/ xpcnativewrappers=no
+
+skin		jasmine_reporter		classic/1.0	chrome/skin/classic/
+
+overlay		chrome://firebug/content/firebugOverlay.xul		chrome://jasmine_reporter/content/jasmine_reporter.xul
